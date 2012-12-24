@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/event-listener.xsd">
+	<import>
+		<!-- User -->
+		<eventlistener>
+			<eventClassName>RegisterForm</eventClassName>
+			<eventName>saved</eventName>
+			<listenerClassFile>lib/system/event/listener/RegisterFormIRCUserListener.class.php</listenerClassFile>
+			<environment>user</environment>
+			<inherit>1</inherit>
+		</eventlistener>
+		<eventlistener>
+			<eventClassName>AccountManagementForm</eventClassName>
+			<eventName>save</eventName>
+			<listenerClassFile>lib/system/event/listener/AccountManagementIRCUserListener.class.php</listenerClassFile>
+			<environment>user</environment>
+			<inherit>1</inherit>
+		</eventlistener>
+		
+		<!-- Admin -->
+		<eventlistener>
+			<eventClassName>UserAddForm</eventClassName>
+			<eventName>saved</eventName>
+			<listenerClassFile>lib/system/event/listener/UserAddFormIRCUserListener.class.php</listenerClassFile>
+			<environment>admin</environment>
+			<inherit>1</inherit>
+		</eventlistener>
+		<eventlistener>
+			<eventClassName>UserEditForm</eventClassName>
+			<eventName>save</eventName>
+			<listenerClassFile>lib/system/event/listener/UserEditFormIRCUserListener.class.php</listenerClassFile>
+			<environment>admin</environment>
+			<inherit>1</inherit>
+		</eventlistener>
+		<eventlistener>
+			<eventClassName>UserDeleteAction</eventClassName>
+			<eventName>execute</eventName>
+			<listenerClassFile>lib/system/event/listener/UserDeleteActionIRCUserListener.class.php</listenerClassFile>
+			<environment>admin</environment>
+			<inherit>1</inherit>
+		</eventlistener>
+		<eventlistener>
+			<eventClassName>UserDeleteAction</eventClassName>
+			<eventName>executed</eventName>
+			<listenerClassFile>lib/system/event/listener/UserDeleteActionIRCUserListener.class.php</listenerClassFile>
+			<environment>admin</environment>
+			<inherit>1</inherit>
+		</eventlistener>
+	</import>
+</data>
